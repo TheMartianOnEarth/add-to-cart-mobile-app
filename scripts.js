@@ -27,16 +27,23 @@ buttonEl.addEventListener("click", () => {
 });
 
 onValue(shoppingListInDB, function (snapshot) {
-    let itemsArray = Object.entries(snapshot.val());
 
-    clearList();
-    for (const item of itemsArray) {
-        let currentItem = item;
-        let currentItemID = item[0];
-        let currentItemValue = item[1];
+    if (snapshot.exists()){
+        let itemsArray = Object.entries(snapshot.val());
 
-        addListItem(currentItem);
+        clearList();
+
+        for (const item of itemsArray) {
+            let currentItem = item;
+            let currentItemID = item[0];
+            let currentItemValue = item[1];
+
+            addListItem(currentItem);
+        }
+    } else {
+        listEl.innerHTML = "No items here yet...";
     }
+    
 })
 
 const clearInputField = () => inputEl.value = "";

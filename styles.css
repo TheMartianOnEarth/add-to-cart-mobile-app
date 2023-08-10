@@ -1,8 +1,10 @@
 html, body {
     margin: 0;
     padding: 0;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Bricolage Grotesque', sans-serif;
     background-color: #EEF0F4;
+    color: #432000;
+    user-select: none;
 }
 
 body {
@@ -29,19 +31,28 @@ input {
     border-radius: 8px;
     font-size: 20px;
     text-align: center;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Bricolage Grotesque', sans-serif;
     margin: 10px 0;
 }
 
 button {
-    color: #FDFDFD;
-    background-color: #AC485A;
+    
+    background-color: #ffd757;
+    color: #ef6713;
+    font-weight:1000;
     border: none;
     padding: 15px;
     border-radius: 8px;
     font-size: 20px;
     text-align: center;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+button:hover {
+    color: #FDFDFD;
+    background-color: #ea9624;
+    font-weight:1000;
+    cursor: pointer;
 }
 
 ul {
@@ -63,5 +74,11 @@ ul li {
     /*to justify the list of items*/
     flex-grow: 1;
     text-align: center;
+}
+
+ul li:hover {
+    background-color: #FFECC7;
+    cursor: pointer;
+    font-size: 19px;
 }
 
